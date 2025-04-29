@@ -1,0 +1,21 @@
+Transaction_ID,Department,Expense_Type,Amount_USD,Transaction_Date,Vendor
+NYC100001,Education,Personnel,134500.75,2023-03-21,ABC Inc.
+NYC100002,Transportation,Capital Projects,24400.00,2023-06-11,City Solutions
+NYC100003,Sanitation,Maintenance,58700.90,2023-04-08,Urban Works
+NYC100004,Health,Contracts,32250.10,2023-01-14,Metro Services
+NYC100005,Parks,Personnel,150000.00,2023-05-20,GreenTech
+NYC100006,Housing,Capital Projects,98000.00,2023-07-12,City Solutions
+NYC100007,Public Safety,Contracts,45500.00,2023-02-09,Urban Works
+NYC100008,Sanitation,Supplies,67200.00,2023-03-01,ABC Inc.
+NYC100009,Education,Maintenance,39500.00,2023-08-30,Metro Services
+NYC100010,Transportation,Personnel,110000.00,2023-11-17,City Solutions
+NYC100011,Health,Supplies,30150.25,2023-09-10,ABC Inc.
+NYC100012,Housing,Contracts,41500.00,2023-10-19,GreenTech
+NYC100013,Parks,Capital Projects,90500.99,2023-12-02,Urban Works
+NYC100014,Public Safety,Personnel,139000.00,2023-06-15,Metro Services
+NYC100015,Education,Maintenance,72000.00,2023-02-27,GreenTech
+NYC100016,Health,Contracts,56000.00,2023-04-24,City Solutions
+NYC100017,Housing,Personnel,134000.00,2023-05-13,ABC Inc.
+NYC100018,Parks,Supplies,49000.99,2023-07-07,Metro Services
+NYC100019,Sanitation,Capital Projects,88500.75,2023-08-12,Urban Works
+NYC100020,Transportation,Maintenance,60500.00,2023-10-03,GreenTech

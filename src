@@ -1,0 +1,6 @@
+src/
+├── __init__.py
+├── extract.py       # Downloads or copies raw CSVs (e.g., NYC finance open data API)
+├── transform.py     # Cleans, normalizes, and reshapes the data
+├── load.py          # Writes transformed data into your database (e.g., Postgres)
+└── utils.py         # Reusable helper functions (e.g., database connection, config parsing)

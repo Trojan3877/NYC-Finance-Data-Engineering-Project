@@ -1,36 +1,68 @@
 # NYC Finance Data Engineering Project
 
-![CI](https://img.shields.io/github/actions/workflow/status/Trojan3877/NYC-Finance-Data-Engineering-Project/ci.yml?branch=main)
-![License](https://img.shields.io/github/license/Trojan3877/NYC-Finance-Data-Engineering-Project)
-![GitHub stars](https://img.shields.io/github/stars/Trojan3877/NYC-Finance-Data-Engineering-Project?style=social)
+![MIT License](https://img.shields.io/badge/license-MIT-green.svg)
+![GitHub repo stars](https://img.shields.io/github/stars/Trojan3877/NYC-Finance-Data-Engineering-Project?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/Trojan3877/NYC-Finance-Data-Engineering-Project?style=social)
-![GitHub issues](https://img.shields.io/github/issues/Trojan3877/NYC-Finance-Data-Engineering-Project)
-![GitHub top language](https://img.shields.io/github/languages/top/Trojan3877/NYC-Finance-Data-Engineering-Project)
+![Build passing](https://img.shields.io/github/actions/workflow/status/Trojan3877/NYC-Finance-Data-Engineering-Project/ci.yml?branch=main)
+![Python version](https://img.shields.io/badge/python-3.9%2B-blue)
 
-> End-to-end ETL pipeline for NYC Finance data: extract, transform, load, and analytics summary.
+---
 
+## Overview
 
-# NYC-Finance-Data-Engineering-Project
-A Modular data pipeline that ingests, cleans, stores, and analyzes NYC government financiak data, simulating scalable, cloud-ready architecture using open data.
-# data_ingestion/nyc_data_fetcher.py
+This project builds a **full data engineering pipeline** for NYC financial data.
 
-import requests
-import os
+Pipeline includes:
+✅ ETL workflows  
+✅ Data validation & cleaning  
+✅ Data transformation  
+✅ Business intelligence (BI) reporting  
 
-DATA_URL = "https://data.cityofnewyork.us/api/views/xywu-7bv9/rows.csv?accessType=DOWNLOAD"
-SAVE_DIR = "data/raw"
-FILENAME = "nyc_payroll_checkbook.csv"
+---
 
-def fetch_and_save_data():
-    os.makedirs(SAVE_DIR, exist_ok=True)
-    response = requests.get(DATA_URL)
-    if response.status_code == 200:
-        with open(os.path.join(SAVE_DIR, FILENAME), "wb") as f:
-            f.write(response.content)
-        print("Data downloaded and saved successfully.")
-    else:
-        print(f"Failed to fetch data: {response.status_code}")
+## Business Impact
 
-if __name__ == "__main__":
-    fetch_and_save_data()
+Financial services firms require:
+- **High-quality, validated data**  
+- **Scalable ETL pipelines**  
+- **Actionable business insights**  
+
+This project models a **production-ready financial data engineering pipeline**, applicable to fintech, banking, and trading firms.
+
+---
+
+## Architecture
+
+![Architecture Diagram](docs/architecture.png)
+
+---
+
+## Key Features
+
+- Ingests public NYC finance datasets  
+- Cleans and validates data  
+- Transforms for BI and ML modeling  
+- Outputs to analytics dashboard-ready formats  
+
+---
+
+## Tech Stack
+
+- Python (pandas, NumPy)  
+- Apache Airflow (planned)  
+- SQL  
+
+---
+
+## Future Work
+
+- Add orchestration (Airflow)  
+- Integrate with data lake (S3)  
+- Automate reporting pipelines  
+
+---
+
+## License
+
+MIT License
 

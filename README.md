@@ -1,3 +1,15 @@
+# NYC Finance Data Engineering Project
+
+![CI](https://img.shields.io/github/actions/workflow/status/Trojan3877/NYC-Finance-Data-Engineering-Project/ci.yml?branch=main)
+![License](https://img.shields.io/github/license/Trojan3877/NYC-Finance-Data-Engineering-Project)
+![GitHub stars](https://img.shields.io/github/stars/Trojan3877/NYC-Finance-Data-Engineering-Project?style=social)
+![GitHub forks](https://img.shields.io/github/forks/Trojan3877/NYC-Finance-Data-Engineering-Project?style=social)
+![GitHub issues](https://img.shields.io/github/issues/Trojan3877/NYC-Finance-Data-Engineering-Project)
+![GitHub top language](https://img.shields.io/github/languages/top/Trojan3877/NYC-Finance-Data-Engineering-Project)
+
+> End-to-end ETL pipeline for NYC Finance data: extract, transform, load, and analytics summary.
+
+
 # NYC-Finance-Data-Engineering-Project
 A Modular data pipeline that ingests, cleans, stores, and analyzes NYC government financiak data, simulating scalable, cloud-ready architecture using open data.
 # data_ingestion/nyc_data_fetcher.py

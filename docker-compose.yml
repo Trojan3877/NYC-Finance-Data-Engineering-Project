@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: finance_user
+      POSTGRES_PASSWORD: finance_pass
+      POSTGRES_DB: nyc_finance
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  etl:
+    build: .
+    container_name: nyc_finance_etl
+    environment:
+      - DATABASE_URL=postgresql://finance_user:finance_pass@postgres:5432/nyc_finance
+      - RAW_DATA_DIR=/app/data/raw
+      - PROCESSED_DATA_DIR=/app/data/processed
+    volumes:
+      - .:/app
+    depends_on:
+      - postgres
+    command: bash run_etl.sh
+
+volumes:
+  pgdata:

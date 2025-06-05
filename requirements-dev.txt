@@ -1,0 +1,15 @@
+# Linting & formatting
+flake8
+black
+mypy
+
+# Testing
+pytest
+pytest-cov
+
+# Type stubs (if you annotate)
+types-requests
+
+# Documentation (optional)
+mkdocs
+mkdocstrings

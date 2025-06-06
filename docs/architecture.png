@@ -1,0 +1,1 @@
+CSV (NYC Open Data) → Python ETL → PostgreSQL (or Snowflake) → Jupyter Notebook → Dashboard

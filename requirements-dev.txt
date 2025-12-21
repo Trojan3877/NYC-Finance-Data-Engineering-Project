@@ -1,15 +1,10 @@
-# Linting & formatting
-flake8
-black
-mypy
+pandas
+numpy
+scikit-learn
+mlflow
+snowflake-connector-python
+matplotlib
 
-# Testing
-pytest
-pytest-cov
-
-# Type stubs (if you annotate)
-types-requests
-
-# Documentation (optional)
-mkdocs
-mkdocstrings
+# GPU ML (choose one or both)
+torch
+tensorflow

@@ -1,17 +1,20 @@
-# Contributing to NYC Finance Data Engineering Project
+# 🤝 Contributing Guide
 
-## Guidelines
-1. Fork repository
+## How to Contribute
+1. Fork the repository
 2. Create a feature branch
-3. Write code, tests, and documentation
-4. Submit a pull request
+3. Write clean, documented code
+4. Add or update tests
+5. Submit a pull request
 
-## Coding Standards
-- Python 3.10+
-- Use type hints
-- Follow PEP8
-- Include tests for new features
+## Code Standards
+- PEP8 compliance
+- Clear function naming
+- Type hints where possible
+- Modular design
 
-## Running Tests
-```bash
-pytest tests/
+## Commit Convention
+- feat: new feature
+- fix: bug fix
+- docs: documentation
+- refactor: code cleanup

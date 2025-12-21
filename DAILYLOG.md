@@ -1,22 +1,16 @@
- Engineering Log — NYC Finance Data Engineering
+# 🛠 Daily Engineering Log
 
-## Day 1
-- Scaffolded project
-- Designed folder structure
-- Set up Python environment
+## 2025-01-12
+- Added FastAPI inference endpoint
+- Implemented Streamlit dashboard
+- Dockerized API for GPU deployment
 
-## Day 2
-- Implemented ETL ingestion with Snowflake
-- Configured connection and credentials
+## 2025-01-13
+- Integrated MLflow tracking
+- Added CI/CD workflow
+- Created system architecture diagram
 
-## Day 3
-- Built baseline machine learning models
-- Logged experiments with MLflow
-
-## Day 4
-- Created validation metrics and scoring
-- Added automated alerts/stats
-
-## Day 5
-- Polished documentation
-- Added CI/CD and deployment config
+## 2025-01-14
+- Hardened API structure
+- Improved modularity
+- Added contributor guidelines

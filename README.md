@@ -1,68 +1,103 @@
-# NYC Finance Data Engineering Project
+# 🏙️ NYC Finance Data Engineering Project (L7 Production-Ready)
 
-![MIT License](https://img.shields.io/badge/license-MIT-green.svg)
-![GitHub repo stars](https://img.shields.io/github/stars/Trojan3877/NYC-Finance-Data-Engineering-Project?style=social)
-![GitHub forks](https://img.shields.io/github/forks/Trojan3877/NYC-Finance-Data-Engineering-Project?style=social)
-![Build passing](https://img.shields.io/github/actions/workflow/status/Trojan3877/NYC-Finance-Data-Engineering-Project/ci.yml?branch=main)
-![Python version](https://img.shields.io/badge/python-3.9%2B-blue)
-
----
-
-## Overview
-
-This project builds a **full data engineering pipeline** for NYC financial data.
-
-Pipeline includes:
-✅ ETL workflows  
-✅ Data validation & cleaning  
-✅ Data transformation  
-✅ Business intelligence (BI) reporting  
+![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
+![Docker](https://img.shields.io/badge/Docker-Enabled-blue?logo=docker)
+![CUDA](https://img.shields.io/badge/NVIDIA-CUDA-green?logo=nvidia)
+![MLflow](https://img.shields.io/badge/MLflow-Tracking-blue)
+![Snowflake](https://img.shields.io/badge/Snowflake-Data%20Warehouse-29B5E8?logo=snowflake)
+![FastAPI](https://img.shields.io/badge/FastAPI-API-009688?logo=fastapi)
+![CI/CD](https://img.shields.io/badge/GitHub-Actions-black?logo=github)
+![Status](https://img.shields.io/badge/Production-Ready-success)
+![Repo Stats](https://github-readme-stats.vercel.app/api/pin/?username=Trojan3877&repo=NYC-Finance-Data-Engineering-Project&theme=radical)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Trojan3877&layout=compact&theme=radical)
 
 ---
 
-## Business Impact
-
-Financial services firms require:
-- **High-quality, validated data**  
-- **Scalable ETL pipelines**  
-- **Actionable business insights**  
-
-This project models a **production-ready financial data engineering pipeline**, applicable to fintech, banking, and trading firms.
+## 📌 Overview
+This project is a **production-grade Data Engineering & ML pipeline** built on real-world financial datasets.  
+It demonstrates **end-to-end system design**, **cloud-ready deployment**, **GPU acceleration**, and **modern MLOps practices** used by Big Tech and FinTech companies.
 
 ---
 
-## Architecture
-
-![Architecture Diagram](docs/architecture.png)
-
----
-
-## Key Features
-
-- Ingests public NYC finance datasets  
-- Cleans and validates data  
-- Transforms for BI and ML modeling  
-- Outputs to analytics dashboard-ready formats  
+## 🧠 Core Capabilities
+- Scalable ETL pipeline for NYC financial datasets  
+- Snowflake-backed analytics warehouse  
+- ML model training with **GPU (CUDA) support**  
+- MLflow experiment tracking  
+- Dockerized microservices  
+- CI/CD with GitHub Actions  
+- Cloud-ready (Render / GPU providers)
 
 ---
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7e616bb5-f566-4a33-929f-f5cdc9e1cc5e" />
 
-## Tech Stack
+## 🧰 Tech Stack
 
-- Python (pandas, NumPy)  
-- Apache Airflow (planned)  
-- SQL  
+### Data Engineering
+- **Python 3.10**
+- **Pandas / NumPy**
+- **Snowflake**
+- **CSV / Parquet Pipelines**
+
+### Machine Learning
+- **Scikit-Learn**
+- **PyTorch / TensorFlow (GPU-ready)**
+- **MLflow**
+
+### Infrastructure & DevOps
+- **Docker (CUDA-enabled)**
+- **GitHub Actions (CI/CD)**
+- **Render Deployment**
+- **NVIDIA CUDA**
+
+### APIs & Monitoring
+- **FastAPI**
+- **MLflow Tracking UI**
 
 ---
+🧩 Logical Flow 
+NYC Open Finance Data
+        ↓
+Data Ingestion (CSV / APIs)
+        ↓
+ETL Processing (Python / Pandas)
+        ↓
+Snowflake Data Warehouse
+        ↓
+Feature Engineering
+        ↓
+ML Model Training (GPU / CUDA)
+        ↓
+MLflow Experiment Tracking
+        ↓
+FastAPI Prediction Service
+        ↓
+Cloud Deployment (Docker / Render
+## ⚡ Quick Start (Local)
 
-## Future Work
+### 1️⃣ Clone Repository
+```bash
+git clone https://github.com/Trojan3877/NYC-Finance-Data-Engineering-Project.git
+cd NYC-Finance-Data-Engineering-Project
+pip install -r requirements.txt
+python pipeline.py
+docker build -t nyc-finance-pipeline .
+docker run nyc-finance-pipeline
+docker run --gpus all nyc-finance-pipeline
+python pipeline.py
 
-- Add orchestration (Airflow)  
-- Integrate with data lake (S3)  
-- Automate reporting pipelines  
+📊 MLflow Tracking
+mlflow ui
 
----
 
-## License
+Open: http://localhost:5000
 
-MIT License
+Tracks:
 
+Metrics
+
+Parameters
+
+Model versions
+
+Experiments

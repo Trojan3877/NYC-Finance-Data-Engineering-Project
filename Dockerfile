@@ -1,18 +1,27 @@
-# Use a slim Python image
-FROM python:3.9-slim
+# NVIDIA CUDA base image
+FROM nvidia/cuda:12.1.1-cudnn8-runtime-ubuntu22.04
 
 # Set working directory
 WORKDIR /app
 
-# Copy requirements and install dependencies
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    python3 \
+    python3-pip \
+    git \
+    && rm -rf /var/lib/apt/lists/*
 
-# Copy the rest of the code
+# Copy project files
 COPY . .
 
-# If you rely on environment variables, you can define defaults here
-ENV DATA_DIR=/app/data
+# Upgrade pip
+RUN pip3 install --upgrade pip
 
-# Default command can be overridden; this example assumes a run script exists
-ENTRYPOINT ["bash", "run_etl.sh"]
+# Install Python dependencies
+RUN pip3 install -r requirements.txt
+
+# Expose MLflow port (optional)
+EXPOSE 5000
+
+# Run main pipeline (change if needed)
+CMD ["python3", "pipeline.py"]

@@ -1,0 +1,16 @@
+{
+  "name": "ML Pipeline Automation",
+  "nodes": [
+    {
+      "name": "Trigger",
+      "type": "n8n-nodes-base.cron"
+    },
+    {
+      "name": "Run Training",
+      "type": "n8n-nodes-base.executeCommand",
+      "parameters": {
+        "command": "python train.py"
+      }
+    }
+  ]
+}

@@ -1,8 +1,17 @@
 # Contributing to NYC Finance Data Engineering Project
 
-Thank you for your interest! To contribute enhancements:
+## Guidelines
+1. Fork repository
+2. Create a feature branch
+3. Write code, tests, and documentation
+4. Submit a pull request
 
-1. **Fork** the repository.
-2. Create a branch:
-   ```bash
-   git checkout -b feature/YourFeatureName
+## Coding Standards
+- Python 3.10+
+- Use type hints
+- Follow PEP8
+- Include tests for new features
+
+## Running Tests
+```bash
+pytest tests/

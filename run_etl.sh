@@ -1,18 +1,19 @@
-#!/usr/bin/env bash
-set -e
+import pandas as pd
+from datetime import datetime
 
-echo "🔄 [run_etl] Starting ETL pipeline..."
+def load_raw():
+    df = pd.read_csv("data/raw/nyc_finance_synthetic.csv")
+    return df
 
-# 1. Create processed data directory if it doesn't exist
-mkdir -p data/processed
+def transform(df):
+    df["return"] = (df["close"] - df["open"]) / df["open"]
+    df["day_of_week"] = pd.to_datetime(df["timestamp"]).dt.day_name()
+    return df
 
-# 2. Extract (example: download or copy raw files)
-python src/extract.py --output_dir data/raw
+def save_processed(df):
+    df.to_csv("data/processed/nyc_finance_processed.csv", index=False)
 
-# 3. Transform (clean, normalize, join CSVs, etc.)
-python src/transform.py --input_dir data/raw --output_dir data/processed
-
-# 4. Load (insert into your database)
-python src/load.py --data_dir data/processed --db_url "${DATABASE_URL:-postgresql://localhost:5432/nyc_finance}"
-
-echo "✅ ETL complete!"
+if __name__=="__main__":
+    df = load_raw()
+    df = transform(df)
+    save_processed(df)

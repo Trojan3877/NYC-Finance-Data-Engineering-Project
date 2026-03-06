@@ -1,13 +1,21 @@
-import pandas as pd
-import numpy as np
+from kafka import KafkaProducer
+import json
+import time
+import random
 
-def generate(size=100000):
-    df = pd.DataFrame({
-        "timestamp": pd.date_range(start="2020-01-01", periods=size, freq="H"),
-        "stock_price": np.random.normal(100, 5, size),
-        "volume": np.random.randint(1000, 500000, size),
-        "open": np.random.normal(100, 5, size),
-        "close": np.random.normal(100, 5, size),
-        "sector": np.random.choice(["Tech","Finance","Health"], size)
-    })
-    df.to_csv("data/raw/nyc_finance_synthetic.csv", index=False)
+producer = KafkaProducer(
+    bootstrap_servers="localhost:9092",
+    value_serializer=lambda v: json.dumps(v).encode("utf-8")
+)
+
+def stream_finance_data():
+    while True:
+        message = {
+            "stock_price": round(random.uniform(90, 110), 2),
+            "volume": random.randint(10000, 300000)
+        }
+        producer.send("nyc_finance_topic", message)
+        time.sleep(1)
+
+if __name__ == "__main__":
+    stream_finance_data()

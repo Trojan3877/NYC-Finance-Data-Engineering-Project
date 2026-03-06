@@ -10,7 +10,11 @@ NYC Finance Data Engineering Platform
 ![Benchmark](https://img.shields.io/badge/Benchmarking-Enabled-purple)
 ![Coverage](https://img.shields.io/badge/Coverage-85%25-brightgreen)
 ![License](https://img.shields.io/github/license/Trojan3877/NYC-Finance-Data-Engineering-Project)
-
+![Airflow](https://img.shields.io/badge/Airflow-Orchestrated-017CEE?logo=apacheairflow)
+![S3](https://img.shields.io/badge/AWS-S3_Data_Lake-FF9900?logo=amazonaws)
+![RBAC](https://img.shields.io/badge/Security-RBAC-blue)
+![Cost Monitoring](https://img.shields.io/badge/Cost-Monitored-green)
+![Multi-Region](https://img.shields.io/badge/HA-MultiRegion-red)
 
 
 Overview
@@ -28,17 +32,23 @@ NYC Finance Data Engineering Platform is a scalable, cloud-native data pipeline 
 
 
 Architecture Flow
-Market Data -> Kafka Stream
-↓
-Incremental ETL -> Drift Check
-↓
-Processed Data Storage
-↓
-Warehouse Loader (Snowflake / BigQuery)
-↓
-Metrics + Monitoring (Prometheus)
-↓
-Dashboard (Streamlit)
+Real-Time Market Data
+        ↓
+Kafka Stream
+        ↓
+Airflow Orchestration
+        ↓
+ETL + Drift Detection
+        ↓
+S3 Data Lake (Multi-Region)
+        ↓
+Snowflake Warehouse
+        ↓
+Prometheus + Slack Alerts
+        ↓
+Streamlit Monitoring Dashboard
+        ↓
+Kubernetes Auto-Scaling Cluster
 
 
 

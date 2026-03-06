@@ -1,9 +1,61 @@
+NYC-Finance-Data-Engineering-Project/
+│
 ├── data/
-├── pipeline.py
-├── models/
-├── docker/
-├── .github/workflows/
-├── metrics.md
-├── dailylog.md
-├── contributing.md
+│   ├── raw/
+│   ├── processed/
+│   └── synthetic_generator.py
+│
+├── src/
+│   ├── ingestion/
+│   │   ├── kafka_producer.py
+│   │   ├── kafka_consumer.py
+│   │   └── websocket_stream.py
+│   │
+│   ├── pipelines/
+│   │   ├── etl.py
+│   │   ├── incremental_loader.py
+│   │   └── drift_detection.py
+│   │
+│   ├── warehouse/
+│   │   ├── snowflake_loader.py
+│   │   └── bigquery_loader.py
+│   │
+│   ├── monitoring/
+│   │   ├── prometheus_metrics.py
+│   │   └── tracing.py
+│   │
+│   ├── profiling/
+│   │   └── data_quality.py
+│   │
+│   └── utils.py
+│
+├── dashboards/
+│   ├── streamlit_app.py
+│   └── websocket_dashboard.py
+│
+├── benchmarks/
+│   └── pipeline_benchmark.py
+│
+├── load_tests/
+│   └── locustfile.py
+│
+├── tests/
+│   └── test_pipelines.py
+│
+├── infra/
+│   ├── terraform/
+│   │   └── main.tf
+│   ├── k8s/
+│   └── helm/
+│
+├── .github/
+│   └── workflows/
+│       ├── ci.yml
+│       ├── trivy.yml
+│       ├── canary.yml
+│       └── release.yml
+│
+├── Dockerfile
+├── docker-compose.yml
+├── requirements.txt
 └── README.md

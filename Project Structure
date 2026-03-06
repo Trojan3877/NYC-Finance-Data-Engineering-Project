@@ -54,7 +54,12 @@ NYC-Finance-Data-Engineering-Project/
 │       ├── trivy.yml
 │       ├── canary.yml
 │       └── release.yml
+infra/airflow/
 │
+├── dags/
+│   └── nyc_finance_pipeline.py
+├── Dockerfile
+└── docker-compose.airflow.yml
 ├── Dockerfile
 ├── docker-compose.yml
 ├── requirements.txt

@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: nyc-finance-sa
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: nyc-finance-role
+rules:
+- apiGroups: [""]
+  resources: ["pods"]
+  verbs: ["get", "watch", "list"]
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: nyc-finance-binding
+subjects:
+- kind: ServiceAccount
+  name: nyc-finance-sa
+roleRef:
+  kind: Role
+  name: nyc-finance-role
+  apiGroup: rbac.authorization.k8s.io

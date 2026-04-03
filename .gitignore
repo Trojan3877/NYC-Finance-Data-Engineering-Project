@@ -1,0 +1,30 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environments
+venv/
+.env/
+
+# IDE/editor folders
+.vscode/
+.idea/
+
+# Data directories (if you only keep code in Git)
+data/raw/
+data/processed/
+
+# Logs, SQLite databases, and temp files
+*.log
+*.sqlite3
+*.tmp
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Docker artefacts
+docker-compose.override.yml
+
+# Mac or Linux system files
+.DS_Store

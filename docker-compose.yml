@@ -15,6 +15,32 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
 
+  api:
+    build: .
+    container_name: nyc_finance_api
+    env_file:
+      - .env
+    environment:
+      - DATABASE_URL=${DATABASE_URL:-postgresql://finance_user:finance_pass@postgres:5432/nyc_finance}
+      - MODEL_PATH=${MODEL_PATH:-models/model.pkl}
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres
+
+  dashboard:
+    image: python:3.10-slim
+    container_name: nyc_finance_dashboard
+    working_dir: /app
+    volumes:
+      - .:/app
+    command: >
+      bash -c "pip install --quiet streamlit pandas && streamlit run dashboard/app.py --server.port 8501 --server.address 0.0.0.0"
+    ports:
+      - "8501:8501"
+    depends_on:
+      - api
+
   etl:
     build: .
     container_name: nyc_finance_etl
